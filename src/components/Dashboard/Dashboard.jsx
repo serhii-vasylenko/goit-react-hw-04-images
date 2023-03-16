@@ -19,7 +19,7 @@ export const Dashboard = () => {
       <ImageGallery  query={query} />
       <ToastContainer
         position="top-right"
-        autoClose={3000}
+        autoClose={2000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick

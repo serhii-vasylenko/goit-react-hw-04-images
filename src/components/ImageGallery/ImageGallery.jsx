@@ -40,9 +40,8 @@ export const ImageGallery = ({ query }) => {
         setImages(images => [...images, ...hits]);
         setTotalHits(totalHits);
 
-        totalHits
-          ? toast.info(`We found ${totalHits} image(s)`)
-          : toast.warning(`Oops, 0 images found`);
+        if (page === 1 && totalHits) toast.info(`We found ${totalHits} image(s)`);
+        if (page === 1 && !totalHits) toast.error(`We found ${totalHits} image(s)`);
       } catch (error) {
       } finally {
         setLoading(false);
